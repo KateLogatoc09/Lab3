@@ -1,0 +1,374 @@
+ERROR - 2023-10-01 06:07:45 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:07:45 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:08:55 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:08:55 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:09:45 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:09:45 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:10:26 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:10:26 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:10:31 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:10:31 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:10:38 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:10:38 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:14:00 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:14:00 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:14:04 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:14:04 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:14:38 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:14:38 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+ERROR - 2023-10-01 06:14:41 --> mysqli_sql_exception: Table 'storedb2.users' doesn't exist in C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Lab3\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\Lab3\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\Lab3\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\Lab3\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\Lab3\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Lab3\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\Lab3\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', Array, Array)
+#7 C:\laragon\www\Lab3\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\Lab3\app\Controllers\UserController.php(24): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\Lab3\system\CodeIgniter.php(919): App\Controllers\UserController->signup()
+#10 C:\laragon\www\Lab3\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#11 C:\laragon\www\Lab3\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\Lab3\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\Lab3\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 06:14:41 --> Table 'storedb2.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('dummy@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dummy@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\UserController.php(24): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->signup()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 08:36:16 --> Non-static method App\Libraries\Hash::check() cannot be called statically
+in APPPATH\Controllers\UserController.php on line 103.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 08:42:49 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\UserController.php on line 101.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 09:22:47 --> Undefined constant "App\Controllers\UserController"
+in APPPATH\Controllers\UserController.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 10:27:22 --> Undefined variable $ses_data
+in APPPATH\Controllers\UserController.php on line 100.
+ 1 APPPATH\Controllers\UserController.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ses_data', 'C:\\laragon\\www\\Lab3\\app\\Controllers\\UserController.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 10:28:56 --> Class "App\Controllers\Hash" not found
+in APPPATH\Controllers\UserController.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')
+CRITICAL - 2023-10-01 10:42:47 --> password_verify(): Argument #2 ($hash) must be of type string, array given
+in APPPATH\Controllers\UserController.php on line 106.
+ 1 APPPATH\Controllers\UserController.php(106): password_verify('mghhfhgfgh', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->check()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Lab3\\public\\index.php')

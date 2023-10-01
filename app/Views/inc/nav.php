@@ -26,7 +26,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/emart">
+                <a class="nav-link" href="/">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>eMart</span></a>
             </li>

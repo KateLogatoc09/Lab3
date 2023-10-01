@@ -1,64 +1,118 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\UserModel;
 use App\Controllers\BaseController;
+use App\Models\UserModel;
+use App\Libraries\Hash;
+
 
 class UserController extends BaseController
 {
+    public function __construct(){
+        helper(['url','form']);
+    }
+    public function login()
+    {
+        return view('login');
+    }
     public function register()
     {
-        helper(['form']); 
-        $rules = [ 
-            'username' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]', 
-            'password' => 'required|min_length[4]|max_length[50]', 
-            'confirmpassword' => 'matches[password]' 
-        ]; 
-        if($this->validate($rules)){ 
-            $userModel = new UserModel(); 
-            $data = [ 
-                username => $this->request->getVar('username'), 
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT) 
-            ]; 
-            $userModel->save($data); 
-            return redirect()->to('/signin'); 
-        }else{ 
-            $data['validation'] = $this->validator; 
-            echo view('signup', $data); 
-        } 
+        return view('register');
     }
-
-    public function LoginAuth()
+    public function signup()
     {
-        $session = session(); 
-        $userModel = new UserModel(); 
-        $username = $this->request->getVar('username'); 
-        $password = $this->request->getVar('password'); 
+        $validation = $this->validate([
+            'username'=>[
+                'rules'=>'required',
+                'errors'=>[
+                    'required'=>'Username is required'
+                ]
+                ],
+                'email'=>[
+                    'rules'=>'required|valid_email|is_unique[users.email]',
+                    'errors'=>[
+                        'required'=>'Email is required',
+                        'valid_email'=>'You must enter a valid email',
+                        'is_unique'=>'Email already taken'
+                    ]
+                ],
+                'password'=>[
+                    'rules'=>'required|min_length[5]|max_length[12]',
+                    'errors'=>[
+                        'required'=>'Password is required',
+                        'min_length'=>'Password must have atleast 5 characters in length',
+                        'max_length'=>'Password must not have more than 12 characters'
+                    ]
+                ],
+                'cpassword'=>[
+                    'rules'=>'required|min_length[5]|max_length[12]|matches[password]',
+                    'errors'=>[
+                        'required'=>'Confirm password is required',
+                        'min_length'=>'Confirm password must have atleast 5 characters in length',
+                        'max_length'=>'Confirm password must not have more than 12 characters',
+                        'matches'=>'Confirm password does not match password'
+                    ]
+                ]
+        ]);
 
-        $data = $userModel->where('username', $username)->first(); 
+        if(!$validation){
+            return view('register', ['validation'=>$this->validator]);
+        }else{
+            $username = $this->request->getPost('username');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
 
-        if($data){ 
-            $pass = $data['password']; 
-            $authenticatePassword = password_verify($password, $pass); 
-        if($authenticatePassword){ 
-            $ses_data = [ 
-                'id' => $data|['id'], 
-                username => $data['username'], 
-                'isLoggedin' => TRUE 
-            ]; 
-            $session->set($ses_data); 
-            return redirect()->to('/profile'); 
-        }else{ 
-            $session->setFlashdata('msg', 'Password is incorrect.'); 
-            return redirect()->to('/signin'); 
-        } 
-    }else{ 
-        $session->setFlashdata('msg', 'Email does not exist.'); 
-        return redirect()->to('/signin'); 
+            $values = [
+                'username'=>$username,
+                'email'=>$email,
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            ];
+            $userModel = new UserModel();
+            $query = $userModel->insert($values);
+            if(!$query){
+                return redirect()->back()->with('fail', 'Something went wrong');
+            }else{
+                return redirect()->to('register')->with('success', 'You are now registered successfully');
+            }
+        }
     }
-    if(!session()->get('isLoggedIn'))
-    {
-        return redirect()->to('/signin');
-    }
+    function check(){
+        $validation = $this->validate([
+            'email'=>[
+                    'rules'=>'required|valid_email|is_not_unique[users.email]',
+                    'errors'=>[
+                        'required'=>'Email is required',
+                        'valid_email'=>'Enter valid email address',
+                        'is_not_unique'=>'This email is not registered'
+                    ]
+                ],
+                'password'=>[
+                    'rules'=>'required|min_length[5]|max_length[12]',
+                    'errors'=>[
+                        'required'=>'Password is required',
+                        'min_length'=>'Password must have atleast 5 characters in length',
+                        'max_length'=>'Password must not have more than 12 characters'
+                    ]
+                ]
+        ]);
+        if(!$validation){
+            return view('login', ['validation'=>$this->validator]);
+        }else{
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');
+            $userModel = new UserModel();
+            $user_info = $userModel->where('email', $email)->first();
+            $check_password = Hash::check($password, $user_info['password']);
+
+            if(!$check_password){
+                session()->setFlashdata('fail', 'Incorrect password');
+                return redirect()->to('admindash')->withInput();
+            }else{   
+                $user_id = $user_info['id'];
+                session()->set('loggedUser', $user_id);
+                return redirect()->to('login');
+            }
+        }
+        
     }
 }
